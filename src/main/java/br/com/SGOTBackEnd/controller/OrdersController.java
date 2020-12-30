@@ -42,17 +42,11 @@ public class OrdersController {
 		return ResponseEntity.ok().body(order);
 	}
 	
-	// getOrders.totalValue > 500
-	//@GetMapping("/ordersAbove500/")
-	//@Query("SELECT * from tbl_orders WHERE totalValue > 500")
-	//public ResponseEntity<Orders> getOrdersByValue(@PathVariable(value = "id") Long orderId) throws ResourceNotFoundException {
-	//	Orders order = ordersRepository.findById(orderId)
-	//			.orElseThrow(() -> new ResourceNotFoundException("Não foi encontrado um pedido com id: " + orderId));
-	//	return ResponseEntity.ok().body(order);
-	//}
+	// getOrdersByValueAbove500
 	
-	// createOrder
+	// codigo aqui
 	
+	// criar Order
 	@PostMapping("orders")
 	public Orders createOrder(@RequestBody Orders order) {
 		return this.ordersRepository.save(order);

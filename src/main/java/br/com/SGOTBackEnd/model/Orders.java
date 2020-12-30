@@ -15,11 +15,11 @@ public class Orders {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	@Column(name = "product1", nullable = false)
-	private Product product1;
+	private String product1;
 	@Column(name = "product2", nullable = true)
-	private Product product2 = null;
+	private String product2 = null;
 	@Column(name = "product3", nullable = true)
-	private Product product3 = null;
+	private String product3 = null;
 	@Column(name = "totalValue")
 	private double totalValue;
 	
@@ -27,7 +27,7 @@ public class Orders {
 	public Orders() {
 		super();
 	}
-	public Orders(long id, Product product1, Product product2, Product product3, double totalValue) {
+	public Orders(long id, String product1, String product2, String product3, double totalValue) {
 		super();
 		this.id = id;
 		this.product1 = product1;
@@ -41,22 +41,22 @@ public class Orders {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public Product getProduct1() {
+	public String getProduct1() {
 		return product1;
 	}
-	public void setProduct1(Product product1) {
+	public void setProduct1(String product1) {
 		this.product1 = product1;
 	}
-	public Product getProduct2() {
+	public String getProduct2() {
 		return product2;
 	}
-	public void setProduct2(Product product2) {
+	public void setProduct2(String product2) {
 		this.product2 = product2;
 	}
-	public Product getProduct3() {
+	public String getProduct3() {
 		return product3;
 	}
-	public void setProduct3(Product product3) {
+	public void setProduct3(String product3) {
 		this.product3 = product3;
 	}
 	public double getTotalValue() {
