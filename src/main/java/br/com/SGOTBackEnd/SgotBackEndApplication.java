@@ -1,4 +1,4 @@
-package br.com.emiteai;
+package br.com.SGOTBackEnd;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
