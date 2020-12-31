@@ -22,19 +22,64 @@ public class Orders {
 	private String product3 = null;
 	@Column(name = "totalValue")
 	private double totalValue;
+	@Column(name = "valueProduct1")
+	private double valueProduct1;
+	@Column(name = "valueProduct2")
+	private double valueProduct2;
+	@Column(name = "valueProduct3")
+	private double valueProduct3;
 	
 	
 	public Orders() {
 		super();
 	}
-	public Orders(long id, String product1, String product2, String product3, double totalValue) {
+	
+	
+	public Orders(long id, String product1, String product2, String product3, double totalValue, double valueProduct1,
+			double valueProduct2, double valueProduct3) {
 		super();
 		this.id = id;
 		this.product1 = product1;
 		this.product2 = product2;
 		this.product3 = product3;
 		this.totalValue = totalValue;
+		this.valueProduct1 = valueProduct1;
+		this.valueProduct2 = valueProduct2;
+		this.valueProduct3 = valueProduct3;
 	}
+
+	
+
+	public double getValueProduct1() {
+		return valueProduct1;
+	}
+
+
+	public void setValueProduct1(double valueProduct1) {
+		this.valueProduct1 = valueProduct1;
+	}
+
+
+	public double getValueProduct2() {
+		return valueProduct2;
+	}
+
+
+	public void setValueProduct2(double valueProduct2) {
+		this.valueProduct2 = valueProduct2;
+	}
+
+
+	public double getValueProduct3() {
+		return valueProduct3;
+	}
+
+
+	public void setValueProduct3(double valueProduct3) {
+		this.valueProduct3 = valueProduct3;
+	}
+
+
 	public long getId() {
 		return id;
 	}
