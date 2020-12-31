@@ -35,6 +35,7 @@ public class OrdersController {
 	public List<Orders> getAllOrders() {
 		return this.ordersRepository.findAll();
 	}
+	
 	// getOrdersById
 	
 	@GetMapping("/orders/{id}")
@@ -46,7 +47,10 @@ public class OrdersController {
 	
 	// getOrdersByValueAbove500
 	
-	// codigo aqui
+	@GetMapping("/ordersabove500/")
+	public List<Orders> getAllAbove500() {
+		return this.ordersRepository.findBytotalValueGreaterThan(500.00);
+	}
 	
 	// criar Order
 	@PostMapping("orders")
@@ -63,6 +67,9 @@ public class OrdersController {
 		order.setProduct1(orderDetails.getProduct1());
 		order.setProduct2(orderDetails.getProduct2());
 		order.setProduct3(orderDetails.getProduct3());
+		order.setValueProduct1(orderDetails.getValueProduct1());
+		order.setValueProduct2(orderDetails.getValueProduct2());
+		order.setValueProduct3(orderDetails.getValueProduct3());
 		order.setTotalValue(orderDetails.getTotalValue());
 		
 		return ResponseEntity.ok(this.ordersRepository.save(order));
