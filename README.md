@@ -15,11 +15,3 @@ O SGOT foi um sistema proposto à mim que consiste em um sistema basico onde ped
 ### Banco de Dados
  - PostgreSQL
  - Hibernate
- 
-### Gerenciador de Pacote 
-- yarn
-
-## Instalação
-
-##### `yarn build`
-##### `yarn start`
