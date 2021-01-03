@@ -15,6 +15,9 @@ public class TransportOrder {
 	@Column(name = "sent", nullable = false)
 	private boolean sent = false;
 	
+	public TransportOrder() {
+		super();	
+	}
 	public TransportOrder(long idProduct, boolean sent) {
 		super();
 		this.idProduct = idProduct;

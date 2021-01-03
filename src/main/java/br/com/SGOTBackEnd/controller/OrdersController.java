@@ -36,6 +36,11 @@ public class OrdersController {
 		return this.ordersRepository.findAll();
 	}
 	
+	@GetMapping("orders2")
+	public List<Orders> getAllOrders2() {
+		return this.ordersRepository.getAllOrders2();
+	}
+	
 	// getOrdersById
 	
 	@GetMapping("/orders/{id}")
@@ -84,4 +89,11 @@ public class OrdersController {
 		response.put("deleted", Boolean.TRUE);
 		return response;
 	}
+	@GetMapping("/ordersLastId/")
+	public int lastInsertedId() {
+		int ultimo = ordersRepository.lastIdInserted();
+		return ultimo;
+	}
+	
+	
 }
