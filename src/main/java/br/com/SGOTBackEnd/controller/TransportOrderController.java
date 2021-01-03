@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.SGOTBackEnd.exceptions.ResourceNotFoundException;
+import br.com.SGOTBackEnd.model.Orders;
 import br.com.SGOTBackEnd.model.TransportOrder;
 import br.com.SGOTBackEnd.repository.TransportOrderRepository;
 
@@ -58,7 +59,6 @@ public class TransportOrderController {
 		
 		return ResponseEntity.ok(this.transportRepository.save(transportOrder));
 	}
-	
 	//deleteTransportOrder
 	@DeleteMapping("/transportorders/{id}")
 	public Map<String, Boolean> deleteTransportOrder(@PathVariable(value = "id") Long orderId) throws ResourceNotFoundException {

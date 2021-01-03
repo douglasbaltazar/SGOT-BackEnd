@@ -8,4 +8,5 @@ import br.com.SGOTBackEnd.model.TransportOrder;
 @Repository
 public interface TransportOrderRepository extends JpaRepository<TransportOrder, Long> {
 
+	
 }
